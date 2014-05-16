@@ -2,7 +2,8 @@ define([
     'jquery'
   , 'underscore'
   , 'backbone'
-], function ($, _, Backbone) {
+  , 'app/views/counter'
+], function ($, _, Backbone, CounterView) {
   'use strict';
 
   var AppView = Backbone.View.extend({
@@ -29,7 +30,7 @@ define([
             , '</div>'
           , '</div>'
         , '</div>'
-      , '<div id="content"></div>'
+      , '<div id="content" class="container well"></div>'
       ].join('')
 
     , events: {
@@ -37,19 +38,28 @@ define([
         , 'click #nav-about': 'onNavAbout'
       }
 
+    , views: {}
+
+    , initialize: function () {
+        this.views['counter'] = new CounterView({
+            id: 'counter-widget'
+          , className: 'counter-widget'
+        });
+
+        this.$el.append(this.html);
+        this.$('#content').append(this.views['counter'].render().el);
+      }
+
     , onNavDash: function (e) {
         e.preventDefault();
-        console.log('Navigatoin button clicked');
+        console.log('Navigatoin button clicked, Yay!');
       }
 
     , onNavAbout: function (e) {
         e.preventDefault();
-        console.log('About button Clicked')
+        console.log('About button Clicked, Yay!')
       }
 
-    , initialize: function () {
-        this.$el.append(this.html);
-      }
   });
 
   return AppView;
