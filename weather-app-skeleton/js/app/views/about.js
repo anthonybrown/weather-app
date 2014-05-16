@@ -12,7 +12,8 @@ define([
       }
 
       , render: function () {
-          var html = '<h3>Welcome to the About page.</h3>';
+          var html = '<h3>Welcome to the About page.</h3> \
+              <p>weather app coming soon!</p>';
           this.$el.html(html);
           return this;
       }
