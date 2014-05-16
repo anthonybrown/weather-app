@@ -10,11 +10,12 @@ define([
 
       , initialize: function () {
 
-        }
+      }
 
       , events: {
           'click span': 'addToCounter'
-        }
+        , 'click strong': 'removeView'
+      }
 
       , render: function () {
           var html = '<h3>This view has been \
@@ -22,12 +23,16 @@ define([
             <strong>REMOVE</strong></h3>';
           this.$el.html(html);
           return this;
-        }
+      }
 
       , addToCounter: function () {
           this.count++;
           this.render();
-        }
+      }
+
+      , removeView: function (e) {
+          this.remove();
+      }
 
     });
 
