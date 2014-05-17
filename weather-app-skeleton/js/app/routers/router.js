@@ -7,13 +7,17 @@ define([
 
     var Router = Backbone.Router.extend({
       routes: {
-          ''      : 'goToDash'
+          ''      : 'goToHome'
         , 'dash'  : 'goToDash'
         , 'about' : 'goToAbout'
       }
 
       , initialize: function (view) {
           this.appView = view;
+      }
+
+      , goToHome: function () {
+          this.appView.setPage('home');
       }
 
       , goToDash: function () {

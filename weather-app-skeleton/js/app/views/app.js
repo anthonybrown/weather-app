@@ -2,9 +2,10 @@ define([
     'jquery'
   , 'underscore'
   , 'backbone'
+  , 'app/views/home'
   , 'app/views/dash'
   , 'app/views/about'
-], function ($, _, Backbone, DashView, AboutView) {
+], function ($, _, Backbone, HomeView, DashView, AboutView) {
   'use strict';
 
   var AppView = Backbone.View.extend({
@@ -41,6 +42,11 @@ define([
     , views: {}
 
     , initialize: function () {
+        this.views['home'] = new HomeView({
+            id: 'page-home'
+          , className: 'page-view'
+        });
+
         this.views['about'] = new AboutView({
             id: 'page-about'
           , className: 'page-view'
@@ -52,6 +58,7 @@ define([
         });
 
         this.$el.append(this.html);
+        this.$('#content').append(this.views['home'].render().el);
         this.$('#content').append(this.views['about'].render().el);
         this.$('#content').append(this.views['dash'].render().el);
       }
