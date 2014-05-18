@@ -32,7 +32,7 @@ define([
             , '</div>'
           , '</div>'
         , '</div>'
-      , '<div id="content" class="container well"></div>'
+      , '<div id="content" class="container well col-lg-12"></div>'
       ].join('')
 
     , events: {
@@ -64,8 +64,10 @@ define([
       }
 
     , setPage: function (page) {
+        this.$('.nav li').removeClass('active');
         this.$('.page-view').hide();
-        this.$('#page-'+page).show();
+        this.$('#page-'+page).fadeIn(800);
+        this.$('#nav-'+page).addClass('active');
       }
 
   });

@@ -11,3 +11,7 @@ div.alert {
 #content {
   margin-top: 3.3em;
 }
+
+.page-view p, .page-view h3 {
+  text-align: center;
+}

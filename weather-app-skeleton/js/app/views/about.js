@@ -13,7 +13,8 @@ define([
 
       , render: function () {
           var html = '<h3>Welcome to the About page.</h3> \
-              <p>weather app coming soon!<br> Stay tuned!</p>';
+              <p><em>Weather Watch!</em><br>Is a single page \
+                javascript application!</p>';
           this.$el.html(html);
           return this;
       }
