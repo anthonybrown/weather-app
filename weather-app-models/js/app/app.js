@@ -1,14 +1,16 @@
-define(
-  [
+define([
       'app/views/app'
     , 'app/routers/router'
-  ]
-, function (AppView, Router) {
+    , 'app/models/app'
+], function (AppView, Router, AppModel) {
     'use strict';
 
     var initialize = function () {
-      var appView = new AppView();
-      $('body').append(appView.el);
+      var appModel = new AppModel();
+
+
+      var appView = new AppView({model: appModel});
+      $('body').append(appView.render().el);
 
       var router = new Router(appView);
       Backbone.history.start();
