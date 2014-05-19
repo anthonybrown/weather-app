@@ -2,7 +2,8 @@
  *  Weather APP Styles
  * ====================================================================================*/
 div.alert {
-  background-color: rgba(255, 246, 23, 0.32);
+  background-color: rgba(141, 141, 141, 0.32);
+  border-radius: 0;
 }
 
 
