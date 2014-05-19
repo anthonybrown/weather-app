@@ -5,7 +5,7 @@ define([
 
     var AppModel = Backbone.Model.extend({
         defaults: {
-            'backgroundColor': '#999999'
+            'backgroundColor': '#7E3131'
           , 'celsius': true
           , 'welcomeMessage': 'Welcome to weather watcher'
         }
