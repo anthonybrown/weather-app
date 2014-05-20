@@ -29,7 +29,7 @@ define([
                 , '<li id="nav-dash"><a href="#dash">Dashboard</a></li>'
                 , '<li id="nav-about"><a href="#about">About</a></li>'
               , '</ul>'
-              , '<p class="navbar-text pull-right"></p>'
+              , '<h4 class="navbar-text pull-right"></h4>'
             , '</div>'
           , '</div>'
         , '</div>'
