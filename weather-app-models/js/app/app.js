@@ -17,7 +17,7 @@ define([
       Backbone.history.start();
 
       var daysCollection = new DaysCollection([], {
-        url: 'http://api.wunderground.com/api/65c6079471b5de45/forecast/q/CA/San_Francisco.json'
+        url: 'http://api.wunderground.com/api/65c6079471b5de45/forecast/q/IT/Magenta.json'
       });
 
       daysCollection.fetch({
