@@ -31,7 +31,7 @@ require(
   , 'app/app'
   , 'bootstrap'
   ]
-, function (Backbone, App, bootstrap) {
+, function (Backbone, App) {
     'use strict';
     App.initialize();
 
