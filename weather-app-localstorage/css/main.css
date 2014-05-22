@@ -1,0 +1,20 @@
+/** ====================================================================================/
+ *  Weather APP Styles
+ * ====================================================================================*/
+body {
+  padding-top: 70px;
+}
+div.alert {
+  background-color: rgba(255, 246, 23, 0.32);
+}
+
+#content {
+  margin-top: 8.0em;
+  color: #f7f7f7;
+  line-height: 1.3;
+  padding: 2.3em 0;
+}
+
+.page-view p, .page-view h3 {
+  text-align: center;
+}
