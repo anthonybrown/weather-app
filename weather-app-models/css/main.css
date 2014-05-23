@@ -10,8 +10,10 @@ div.alert {
 
 #content {
   margin-top: 8.0em;
+  padding:1em 0;
 }
 
 .page-view p, .page-view h3 {
   text-align: center;
+  line-height: 2;
 }

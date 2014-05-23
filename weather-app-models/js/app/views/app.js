@@ -33,7 +33,7 @@ define([
             , '</div>'
           , '</div>'
         , '</div>'
-      , '<div id="content" class="container well"></div>'
+      , '<div id="content" class="container"></div>'
       ].join('')
 
     , events: {
